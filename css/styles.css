@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+table {
+    width: 100%;
+    max-width: 960px;
+    margin: 40px auto;
+    padding: 20px;
+    box-shadow: 2px 2px 5px grey;
+    border-spacing: 4px; /*Separación entre celdas*/
+}
+
+th {
+    background-color: #167F92;
+    color: white;
+    padding: 10px;
+}
+
+td {
+    color: #105b68;
+    padding: 10px;
+    border: 1px solid rgba(22, 128, 146, 0.15);
+}
+
+tr:nth-child(even) td {
+    background-color: rgba(22, 128, 146, 0.15);
+}
+
+th:nth-child(1), 
+th:nth-child(2),
+th:nth-child(4) {
+    text-align: left;
+}
+
+td:nth-child(3) {
+    text-align: center;
+}
+
+/* Ejemplo de tabla sin cabecera con iconos */
+
+table.sin-cabecera {
+    border-spacing: 0;
+}
+
+td.usuario::before {
+    content: url('../img/user-circle.svg');
+    position: relative;
+    top: 5px;
+    right: 5px;
+}
+
+td.email::before {
+    content: url('../img/mail.svg');
+    position: relative;
+    top: 5px;
+    right: 5px;
+}
+
+td.fecha-nacimiento::before {
+    content: url('../img/calendar.svg');
+    position: relative;
+    top: 5px;
+    right: 5px;
+}
+
+table.sin-cabecera tr:nth-child(even) td {
+    background-color: white;
+}
+
+table.sin-cabecera td {
+    border: none;
+    border-bottom: 0.5px solid #808080;
+}
